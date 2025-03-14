@@ -1,1 +1,66 @@
 /* TO-DO */
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1.title{
+    position: relative;
+    text-align: center;
+    background-color: rgb(60, 60, 86);
+    padding: 4%;
+}
+
+h1.title p{
+    color: white;
+    font-size: 45px;
+}
+
+div.search_options div{
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    list-style: none; 
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+div.search_options{
+    display: flex;
+    justify-content: center;
+    padding: 1.5%;
+    background-color: rgb(53, 48, 81);
+}
+
+#mySearch{
+    width: 15%;
+    font-size: 16px;
+    padding: 11px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#myMenu{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    list-style: none;
+}
+
+#myMenu li{
+    padding: 1%;
+}
+
+li.frame{
+    border: 1px solid rgb(191, 191, 191);
+    border-radius: 6px;
+    padding: 15px;
+    padding-bottom: 125px;
+    width: 40.5%;
+    height: 615px;
+    margin: 15px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
