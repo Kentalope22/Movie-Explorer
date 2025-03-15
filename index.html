@@ -2,78 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Explorer</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- ToDo -->
-    <script src="script.js"></script>
-
-    <h1 class="title">
-        <p>Movie Explorer</p> 
-    </h1>
-
+    <header>
+        <h1>Movie Explorer</h1>
+    </header>
     <div class="search_options">
-        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search for a movie..." title="Type in a category">
-        <div class="sortbar">sortbar</div>
-        
+        <form id="form">
+            <input type="text" id="search" placeholder="Search for a movie..." class="search"/>
+        </form>
+        <select id="sort">
+            <option value="default">Sort By</option>
+            <option value="release_asc">Release Date (Asc)</option>
+            <option value="release_desc">Release Date (Desc)</option>
+            <option value="rating_asc">Rating (Asc)</option>
+            <option value="rating_desc">Rating (Desc)</option>
+        </select>
+
     </div>
-    <ul id="myMenu">
-        <li class="frame">
-            <img src="image/image_1.jpg" alt="img1" class="imgs_main">
-            <div class="img_txt">
-                <a>movie1</a>
-            </div>
-        </li>
-        <li class="frame">
-            <img src="image/image_1.jpg" alt="img1" class="imgs_main">
-            <div class="img_txt">
-                <a>moive2</a>
-            </div>
-        </li>
-        <li class="frame">
-            <img src="image/image_1.jpg" alt="img1" class="imgs_main">
-            <div class="img_txt">
-                <a>movie3</a>
-            </div>
-        </li>
-        <li class="frame">
-            <img src="image/image_1.jpg" alt="img1" class="imgs_main">
-            <div class="img_txt">
-                <a>movie4</a>
-            </div>
-        </li>
-        <li class="frame">
-            <img src="image/image_1.jpg" alt="img1" class="imgs_main">
-            <div class="img_txt">
-                <a>movie5</a>
-            </div>
-        </li>
-            
-        
-    </ul>
-    <script>
-        function myFunction() {
-          var input, filter, ul, li, a, i;
-          input = document.getElementById("mySearch");
-          filter = input.value.toUpperCase();
-          ul = document.getElementById("myMenu");
-          li = ul.getElementsByTagName("li");
-          for (i = 0; i < li.length; i++) {
-            a = li[i].getElementsByTagName("a")[0];
-            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-              li[i].style.display = "";
-            } else {
-              li[i].style.display = "none";
-            }
-          }
-        }
-    </script>
-
-
-
+    <div id="content"></div>
+    <div class="pagination">
+        <button id="prev">Previous</button>
+        <span id="page-number">Page 1</span>
+        <button id="next">Next</button>
+    </div>
     
-
+</div>
 </body>
 
 
